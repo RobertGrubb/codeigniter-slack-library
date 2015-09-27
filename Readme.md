@@ -42,14 +42,14 @@ This library also comes with a config file that can be used for this library if 
 
  - Does this library support the ability to send messages to multiple channels? **Yes, you can easily send the same message to multiple channels by setting the $channel variable within the library to an array. The below code example will send the message "Your message goes here" to both the general channel, and the random channel.**
 
-        $this->slack->channel = ['general', 'random'];
+        $this->Slack->channel = ['general', 'random'];
 
-        $this->slack->send('Your message goes here.');
+        $this->Slack->send('Your message goes here.');
 
  - How do I set the username of the bot? **Simply set the username variable. See code example below:**
 
-    `$this->slack->username = 'Bot Name';`
+    `$this->Slack->username = 'Bot Name';`
 
  - How do I set the icon for the bot? **You can set the icon by setting the icon variable. See code example below: **
 
-    `$this->slack->icon = ':ghost:'; //You may use a URL as well.`
+    `$this->Slack->icon = ':ghost:'; //You may use a URL as well.`
