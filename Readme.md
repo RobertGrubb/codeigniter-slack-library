@@ -28,28 +28,28 @@ This library also comes with a config file that can be used for this library if 
 		$this->load->library('Slack');
 
         // Setup the configuration for the slack notification.
-        $this->Slack->username = 'CodeIgniter Test Bot';
-        $this->Slack->channel  = ['general', 'random'];
+        $this->slack->username = 'CodeIgniter Test Bot';
+        $this->slack->channel  = ['general', 'random'];
 
         // Send the notification
-        if ($this->Slack->send('This is a test notification from the CI Slack Bot.')) {
-            print_r($this->Slack->output); // Print the response from Slack if you want.
+        if ($this->slack->send('This is a test notification from the CI Slack Bot.')) {
+            print_r($this->slack->output); // Print the response from Slack if you want.
         } else {
-            print_r($this->Slack->error); // This will output the error.
+            print_r($this->slack->error); // This will output the error.
         }
 
 #### FAQS:
 
  - Does this library support the ability to send messages to multiple channels? **Yes, you can easily send the same message to multiple channels by setting the $channel variable within the library to an array. The below code example will send the message "Your message goes here" to both the general channel, and the random channel.**
 
-        $this->Slack->channel = ['general', 'random'];
+        $this->slack->channel = ['general', 'random'];
 
-        $this->Slack->send('Your message goes here.');
+        $this->slack->send('Your message goes here.');
 
  - How do I set the username of the bot? **Simply set the username variable. See code example below:**
 
-    `$this->Slack->username = 'Bot Name';`
+    `$this->slack->username = 'Bot Name';`
 
  - How do I set the icon for the bot? **You can set the icon by setting the icon variable. See code example below: **
 
-    `$this->Slack->icon = ':ghost:'; //You may use a URL as well.`
+    `$this->slack->icon = ':ghost:'; //You may use a URL as well.`
